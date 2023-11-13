@@ -22,7 +22,7 @@ export const createEventSlice: StateCreator<EventSliceProps> = (set) => ({
 
     if (!res) return null
 
-    const event: Event = res.data.event
+    const event: Event = res.data
 
     return event
   },
@@ -120,7 +120,7 @@ async function fetchEvents() {
     return []
   }
 
-  return res.data.events as Event[]
+  return res.data as Event[]
 }
 
 async function fetchHolidayEvents() {

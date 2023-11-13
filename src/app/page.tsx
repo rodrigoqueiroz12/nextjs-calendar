@@ -1,34 +1,36 @@
 import Card from '@/components/Card'
+import { Bird } from 'lucide-react'
+import Link from 'next/link'
 
 export default function Home() {
   return (
-    <main className="flex h-screen items-center justify-center">
+    <main className="flex h-screen w-full items-center justify-center">
       <Card>
-        <form className="flex w-form max-w-sm flex-col gap-4 p-4">
-          <div className="flex flex-1 flex-col items-center gap-3">
-            <label
-              htmlFor="email"
-              className="text-md text-center font-bold sm:text-xl"
-            >
-              {"Welcome! Let's find your account!"}
-            </label>
-            <input
-              type="email"
-              id="email"
-              placeholder="example@email.com"
-              required
-              autoComplete="off"
-              className="w-full rounded-lg bg-zinc-800 px-2 py-1.5 text-center text-sm leading-6 placeholder:text-zinc-300/50"
-            />
-          </div>
+        <div className="max-w-md p-4">
+          <Bird size={44} className="mx-auto mb-4" />
+          <h2 className="mb-6 text-center text-xl">
+            <span className="font-bold">Welcome!</span>
+            <br />
+            The objective of this project is to provide a calendar and register
+            new events
+          </h2>
+          <p className="mb-8 text-center">
+            I hope you find this project interesting, any suggestions, send an
+            email to{' '}
+            <span className="text-emerald-600">
+              rodrigo.queiroz0629@gmail.com
+            </span>
+          </p>
 
-          <button
-            type="submit"
-            className="w-full rounded-lg bg-emerald-600 px-2 py-1.5 text-sm leading-6 text-zinc-50 transition-colors hover:bg-emerald-700"
-          >
-            {'Sign In'}
-          </button>
-        </form>
+          <div className="text-center">
+            <Link
+              href="/events"
+              className="rounded-lg border border-zinc-100/20 px-2 py-1.5 text-center transition-colors hover:text-zinc-100/70"
+            >
+              Go to events
+            </Link>
+          </div>
+        </div>
       </Card>
     </main>
   )

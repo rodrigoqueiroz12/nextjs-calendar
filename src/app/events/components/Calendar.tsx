@@ -133,15 +133,17 @@ export default function Calendar(props: CalendarProps) {
             )}
           </div>
 
-          <div className="absolute right-12 top-2 flex justify-end gap-1">
-            <Link
-              href={`/events/${selectedEvent.id}`}
-              className="rounded-full bg-transparent p-2 text-zinc-100 hover:bg-zinc-100/10"
-              title="Edit task"
-            >
-              <Edit size={18} />
-            </Link>
-          </div>
+          {selectedEvent.type !== 'holiday' && (
+            <div className="absolute right-12 top-2 flex justify-end gap-1">
+              <Link
+                href={`/events/${selectedEvent.id}`}
+                className="rounded-full bg-transparent p-2 text-zinc-100 hover:bg-zinc-100/10"
+                title="Edit task"
+              >
+                <Edit size={18} />
+              </Link>
+            </div>
+          )}
         </Modal>
       )}
     </div>

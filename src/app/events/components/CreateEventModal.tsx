@@ -1,8 +1,7 @@
 import './CreateEventModal.css'
 
 import { Dispatch, SetStateAction } from 'react'
-import CreatableSelect from 'react-select/creatable'
-import { Controller, SubmitHandler, useForm } from 'react-hook-form'
+import { SubmitHandler, useForm } from 'react-hook-form'
 import { useBoundStore } from '@/store/useBoundStore'
 
 import { Event } from '@/@types/event'
@@ -21,15 +20,13 @@ export default function CreateEventModal({
   isModalOpen,
   setIsModalOpen,
 }: CreateEventModalProps) {
-  const { register, handleSubmit, reset, control } = useForm<Event>()
+  const { register, handleSubmit, reset } = useForm<Event>()
 
   const { load, add } = useBoundStore((state) => {
     return { load: state.load, add: state.add }
   })
 
   const onSubmit: SubmitHandler<Event> = async (data) => {
-    return console.log(data)
-
     const event = {
       ...data,
       start: new Date(data.start),
@@ -93,27 +90,6 @@ export default function CreateEventModal({
             />
           </Fieldset>
         </div>
-
-        <Fieldset>
-          <Label htmlFor="tags">Add some tags</Label>
-          <Controller
-            name="tags"
-            control={control}
-            render={({ field }) => (
-              <CreatableSelect
-                className="select"
-                classNamePrefix="react-select"
-                isMulti
-                options={[
-                  { value: 'chocolate', label: 'Chocolate' },
-                  { value: 'strawberry', label: 'Strawberry' },
-                  { value: 'vanilla', label: 'Vanilla' },
-                ]}
-                onChange={field.onChange}
-              />
-            )}
-          />
-        </Fieldset>
       </form>
 
       <Button
