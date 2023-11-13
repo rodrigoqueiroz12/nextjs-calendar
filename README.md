@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Backlog
 
-## Getting Started
+- [x] Desenvolver CRUD de tarefas
+  - userId - uuid
+  - title - text
+  - description - long-text
+  - tags - string[]
+  - deadline - timestamp
+  - createdAt - timestamp
+  - updatedAt - timestamp
+  - [x] Criar task
+  - [x] Listar tasks
+  - [x] Editar task
+  - [x] Detalhar task
+  - [x] Remover task
+- [x] Permitir que o usuário escolha a forma de visualização das tarefas por dia, semana ou mês
+- [x] Campo de busca de tarefas pelo titulo
 
-First, run the development server:
+## Nível Júnior
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- [x] Implemente o maior número de itens possíveis descritos no setor de funcionalidades
+- [x] Mantenha seu código limpo seguindo conceitos de padrões de projetos sempre que possível
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Nível Pleno
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Além das funcionalidade anteriores, acrescente as seguintes
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Tags
 
-## Learn More
+- [] Adicione o atributo Tags no cadastro e edição de tarefas
+- [] Permitir que o usuário cadastre, edite e remova Tags
+- [] Campo de busca de tarefas por Tags (permitir múltipla seleção)
 
-To learn more about Next.js, take a look at the following resources:
+### Feriados
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [x] Consultar uma API REST com os feriados nacionais e destacar na lista de tarefas os dias que contém feriado exibindo o nome do feriado
+- [x] Exemplo de uma API REST publica com os feriados de vários países https://date.nager.at/Api
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Nível Sênior
 
-## Deploy on Vercel
+Implemente as funcionalidades do nível júnior, pleno e acrescente as funcionalidades seguintes:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Login
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- [] Permitir o cadastro de usuários
+- [] Exigir autenticação para acesso ao sistema
+
+### Dashboard
+
+- [] Gráfico de resolução de tarefas
+- [] Gráfico de tags com maior número de tarefas resolvidas
+
+O código fonte deve ser disponibilizado no github pessoal e o link do repositório deve ser enviado como resposta ao email da Diel dentro do prazo determinado no corpo da mensagem.

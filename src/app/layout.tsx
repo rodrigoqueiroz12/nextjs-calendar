@@ -1,8 +1,9 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Figtree } from 'next/font/google'
 import './globals.css'
+import { Annoyed } from 'lucide-react'
 
-const inter = Inter({ subsets: ['latin'] })
+const figtree = Figtree({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -16,7 +17,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={figtree.className}>
+        <div className="mx-auto hidden max-w-5xl sm:block">{children}</div>
+
+        <div className="flex h-screen flex-col items-center justify-center gap-8 p-4 sm:hidden">
+          <Annoyed size={32} />
+          <h2 className="text-center text-sm">
+            Your experience will be much better on a bigger screen, please visit
+            this website on a table or PC
+          </h2>
+        </div>
+      </body>
     </html>
   )
 }

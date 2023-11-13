@@ -1,0 +1,50 @@
+.select {
+  width: 100%;
+  border-radius: 8px;
+  background: #27272a;
+}
+
+.select .react-select__control {
+  background: #18181b;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  color: #f4f4f5;
+}
+
+.select .react-select__multi-value {
+  background: #27272a;
+  
+}
+
+.select .react-select__multi-value__label {
+  color: #f4f4f5;
+}
+
+.select .react-select__menu {
+  background: #18181b;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  color: #f4f4f5;
+}
+
+.select .react-select__menu-list {
+  background: #18181b;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  color: #f4f4f5;
+}
+
+.select .react-select__option {
+  background: #18181b;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  color: #f4f4f5;
+}
+
+.select .react-select__option:is(:hover, :focus, :active) {
+  background: #27272a;
+}

@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .calendar {
+    @apply h-full;
+  }
+
+  .calendar .rbc-calendar {
+    @apply bg-zinc-900 rounded-lg p-2 flex flex-col gap-6;
+  }
+  
+  .calendar .rbc-toolbar {
+    @apply py-2;
+  }
+  
+  .calendar .rbc-month-view {
+    @apply border-0;
+  }
+  
+  .calendar .rbc-toolbar .rbc-btn-group button {
+    @apply px-2 py-1.5 bg-transparent rounded-lg hover:bg-emerald-700 text-sm transition-colors text-zinc-100 leading-6 cursor-default border-0;
+  }
+  
+  .calendar .rbc-header {
+    @apply text-center border-y border-l border-zinc-300/10 text-sm py-1.5 first:rounded-ss-lg last:rounded-se-lg last:border-r;
+  }
+
+  .calendar .rbc-month-row {
+    @apply overflow-visible border-x border-b border-zinc-300/10 last:rounded-es-lg last:rounded-ee-lg;
+  }
+  
+  .calendar .rbc-date-cell {
+    @apply p-2 text-center min-h-[5rem] h-full;
+  }
+  
+  .calendar .rbc-current {
+    @apply bg-zinc-900/95;
+  }
+
+  .calendar .rbc-day-bg + .rbc-day-bg {
+    @apply border-r border-zinc-300/10 last:border-r-0;
+  }
+  
+  .calendar .rbc-date-cell.rbc-off-range {
+    @apply bg-zinc-700;
+  }
+
+  .calendar .rbc-row-segment:has(.rbc-event, .rbc-day-slot .rbc-background-event) {
+    @apply bg-zinc-800;
+  }
+
+  .calendar .rbc-event, .rbc-day-slot .rbc-background-event {
+    @apply bg-emerald-600 px-2 py-1.5;
+  }
+
+  .calendar .rbc-event-content {
+    @apply text-sm text-zinc-100;
+  }
+
+  .calendar .rbc-row-segment:has(.rbc-show-more) {
+    @apply bg-transparent py-1.5;
+  }
+
+  .calendar .rbc-show-more {
+    @apply text-emerald-600 hover:text-emerald-700 transition-colors;
+  }
+
+  .calendar .rbc-event:focus, .rbc-day-slot .rbc-background-event:focus {
+    @apply outline-none outline-2 outline-emerald-800;
+  }
+
+  .calendar :is(*, .rbc-time-slot) {
+    @apply border-zinc-300/10;
+  }
+
+  .calendar .rbc-today {
+    @apply bg-zinc-900/95;
+  }
+
+  .calendar .rbc-toolbar .rbc-btn-group button.rbc-active {
+    @apply bg-emerald-600;
+  }
+
+  .calendar .rbc-row-segment:not(:has(.rbc-event)) {
+    @apply bg-zinc-900
+  }
+}
